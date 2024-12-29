@@ -1,0 +1,203 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(225, 206, 255);
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer"
+    ;
+}
+
+header{
+    grid-area: header;
+    background-color: rgb(166, 121, 207);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header p{
+    font-size: 2rem;
+}
+
+main{
+    grid-area: main;
+    margin: 10px 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-calculadora{
+    height: 100%;
+    width: 25%;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.calculadora{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(119, 114, 114);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.resultado{
+    height: 25%;
+    width: 100%;
+    background-color: rgb(230, 252, 252);
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+
+    overflow: hidden; /* Oculta el contenido que exceda el contenedor */
+    text-overflow: ellipsis; /* Añade "..." cuando el texto se oculta */
+    white-space: nowrap;
+}
+
+#resultadoParrafo{
+    font-size: 1.5rem;
+}
+
+.botones{
+    display: flex;
+    justify-items:center;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    box-sizing: border-box;
+}
+
+.botones button{
+    height: 45px;
+    width: 45px;
+    border-radius: 40px;
+    border: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 1px 1px 5px ;
+    transition: all 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botones button:hover{
+    background-color: rgb(178, 185, 180);
+    cursor: pointer;
+}
+
+#botonAC{
+    background-color: rgb(160, 160, 240);
+}
+
+#botonAC:hover{
+    background-color: rgb(117, 117, 240);
+}
+
+.operaciones{
+    background-color: rgb(181, 166, 209);
+}
+
+.operaciones:hover{
+    background-color: rgb(139, 97, 218) !important;
+}
+
+#botonBorrar{
+    background-color: rgb(240, 137, 133);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#botonBorrar:hover{
+    background-color: rgb(150, 69, 66);
+}
+
+#botonResultado{
+    background-color: rgb(74, 91, 248);
+}
+
+#botonResultado:hover{
+    background-color: rgb(48, 60, 173);
+}
+
+footer{
+    grid-area: footer;
+    background-color: rgb(166, 121, 207);
+}
+
+@media (max-width: 1024px){
+
+    .contenedor-calculadora{
+        width: 30%;
+    }
+
+
+    .botones button{
+        height: 35px;
+        width: 35px;
+        font-size: 0.7rem;
+    }
+
+    .botones span{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px){
+    .contenedor-calculadora{
+        width: 40%;
+    }
+
+    .botones button{
+        height: 30px;
+        width: 30px;
+        font-size: 0.7rem;
+    }
+
+    .botones span{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px){
+
+    main{
+        margin: 0;
+    }
+
+    .contenedor-calculadora{
+        width: 90%;
+    }
+
+    .botones button{
+        height: 50px;
+        width: 50px;
+        font-size: 1rem;
+    }
+
+    .botones span{
+        font-size: 1.3rem;
+    }
+}
